@@ -13,8 +13,7 @@ submitbtn.addEventListener('click', function(){
     }
     })
     //slide entre les bouttons
-btnitems.forEach(element => {
-    element.addEventListener('click', function(){
+    let foufi = function(){
         btnitems.forEach(btn => {
             btn.classList.remove('btn-active');
             btn.classList.remove('btn-items-all')
@@ -30,7 +29,9 @@ btnitems.forEach(element => {
             }
             //permet de declencher le boutton submit
             submitbtn.addEventListener('click', sub);
-        });
+        }
+btnitems.forEach(element => {
+    element.addEventListener('click',foufi);
     }
 );
 //fonction sub qui vq servir dans submitbtn
@@ -49,8 +50,8 @@ function sub(){
         console.log(newcont3)
         container1.classList.remove('container-item-1-active');
         btnitems.forEach(element => {
-            element.classList.remove('btn-active');
-        });
+            element.classList.add('btn-items-all');
+            })
     }
     reseto.addEventListener('click', resetf)
 };
