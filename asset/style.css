@@ -1,0 +1,290 @@
+:root{
+    --white :hsl(0, 0%, 100%);
+    --Ligrey:hsl(217, 12%, 63%);
+    --medgrey:hsl(216, 12%, 54%);
+    --darkblue:hsl(214, 22%, 15%);
+    --verydarkBlue: hsl(216, 12%, 8%);
+    --orange: hsl(25, 97%, 53%);
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    font-family: 'Overpass', sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--verydarkBlue);
+}
+.container{
+    width: 25%;
+    height: 52%;
+    background: radial-gradient(circle at top,hsl(216, 20%, 30%, .4), var(--darkblue) 50%) ;
+    opacity: .9;
+    border-radius: 20px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.img-container{
+    background-color:rgba(62, 73, 90, 0.35) ;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.img-container-active{
+    animation: start .5s 1 ease-out;
+}
+@keyframes start {
+    25%{
+        transform: rotate(15deg);
+    }
+    50%{
+        transform: rotate(-15deg);
+    }
+    75%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+
+span{
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+    color:  var(--white);
+    margin-bottom: 10px;
+}
+.text-container{
+    font-size: 15px;
+    color: var(--Ligrey);
+    font-weight: 400;
+    line-height: 1.5em;
+    margin-bottom: 28px;
+}
+.btn-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+.btn-group div{
+    background-color:rgba(62, 73, 90, 0.35) ;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Ligrey);
+}
+.btn-group div:hover{
+    cursor: pointer;
+    background-color: var(--Ligrey);
+    color: var(--white);
+    transition:  background-color 0.03s ease-out;
+}
+.btn-active{
+    background-color: var(--orange)!important;
+    color: var(--white)!important;
+}
+.submit-button{
+    background-color: var(--orange);
+    color: var(--white);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: .11em;
+    height: 3em;
+    border-radius: 3em;
+    transition:  background-color 0.05s ease-out;
+}
+.submit-button:hover{
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--orange);
+}
+.container-item-1, .container-item-2{
+    grid-area: 1/1/2/2;
+}
+.container-item-1-active{
+    opacity: 0;
+    transition: opacity .5s ease-out;
+}
+/*8888888888888888888888--------
+0-------------------
+----------------*/
+.container-item-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+}
+.img-container-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+.text-count{
+    background-color:rgba(62, 73, 90, 0.35);
+    width: 55%;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .3em .6em;
+    color: var(--orange);
+    margin-bottom: 35px;
+}
+.last-span{
+    display: block;
+    margin-bottom: 10px;
+}
+.text-container-2{
+    text-align: center;
+    color: var(--Ligrey);
+    line-height: 1.5em;
+}
+.btn-selected-text{
+    margin: 0 .2em!important;
+    font-weight: 400!important;
+}
+.container-item-2{
+    opacity: 0;
+}
+.container-item-2-active{
+    opacity: 1;
+    transition: opacity .5s ease-out;
+}
+.text-count{
+    width: max-content;
+}
+/*-----------------------------
+-----------------------------
+----------------------------
+---------------------------
+--------------------------*/
+@media only screen and (max-width: 1420px){
+    .img-container, .btn-group div{
+        width: 45px;
+        height: 45px;
+    }
+    .submit-button{
+       height: 2.5em;;
+    }
+    .container{
+        height: max-content;
+    }
+}
+@media only screen and (max-width: 1225px){
+    .submit-button{
+        height: 2.3em;
+    }
+    .btn-group{
+        margin-bottom: 25px;
+    }
+    .img-container, .btn-group div{
+        width: 40px;
+        height: 40px;
+    }
+}
+@media only screen and (max-width: 1100px){
+    .img-container, .btn-group div{
+        width: 50px;
+        height: 50px;
+    }
+    .container{
+        width: 35%;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .container{
+        width: 35%;
+        /* height: 53%; */
+    }
+    .img-container, .btn-group div{
+        width: 45px;
+        height: 45px;
+    }
+}
+@media only screen and (max-width: 850px){
+    .container{
+        width: 45%;
+        /* height: max-content; */
+    }
+    .submit-button{
+        height: 3em;
+    }
+    .btn-group{
+        margin-bottom: 28px;
+    }
+    .img-container, .btn-group div{
+        width: 50px;
+        height: 50px;
+    }
+}
+@media only screen and (max-width: 720px){
+    .container{
+        width: 50%;
+        /* height: 54%; */
+    }
+}
+@media only screen and (max-width: 655px){
+    .container{
+        width: 55%;
+        /* height: 55%; */
+    }
+}
+@media only screen and (max-width: 600px){
+    .container{
+        width: 60%;
+        /* height: 55%; */
+    }
+}
+@media only screen and (max-width: 530px){
+    .container{
+        width: 65%;
+        /* height: 58%; */
+    }
+}
+@media only screen and (max-width: 500px){
+    .container{
+        width: 75%;
+        /* height: 55%; */
+    }
+}
+@media only screen and (max-width: 430px){
+    .container{
+        width: 85%;
+        /* height: 47%; */
+    }
+    .submit-button{
+        height: 2.8em;
+    }
+}
+@media only screen and (max-width: 400px){
+    .container{
+        width: 85%;
+        /* height: 50%; */
+    }
+    .submit-button{
+        height: 2.5em;
+    }
+    .img-container, .btn-group div{
+        width: 40px;
+        height: 40px;
+    }
+}
