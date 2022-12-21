@@ -130,7 +130,21 @@ span{
     border-radius: 3em;
     transition:  background-color 0.05s ease-out;
 }
-.submit-button:hover{
+.reset-button{
+    background-color: var(--orange);
+    color: var(--white);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    align-items: center;
+    letter-spacing: .11em;
+    height: 2.8em;
+    border-radius: 2.8em;
+    transition:  background-color 0.05s ease-out;
+}
+.submit-button:hover, .reset-button:hover{
     cursor: pointer;
     background-color: var(--white);
     color: var(--orange);
@@ -156,7 +170,7 @@ span{
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 .text-count{
     background-color:rgba(62, 73, 90, 0.35);
@@ -167,7 +181,7 @@ span{
     justify-content: center;
     padding: .3em .6em;
     color: var(--orange);
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 .last-span{
     display: block;
