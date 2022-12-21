@@ -30,6 +30,25 @@
     display: grid;
     grid-template-columns: 1fr;
 }
+.icon-container{
+    margin-top: 100px;
+    display: flex;
+    color: var(--white);
+    justify-content:center;
+    align-items: center;
+}
+.attribution{
+    margin-left: 5px;
+}
+.attribution a{
+    text-decoration: none;
+    color: hsla(25, 97%, 53%, 0.883);
+    font-weight: bold;
+    background-color: rgba(62, 73, 90, 0.35);
+    border-radius: .5em;
+    padding: 2px 5px;
+    margin: 0 2px;
+}
 .img-container{
     background-color:rgba(62, 73, 90, 0.35) ;
     width: 50px;
