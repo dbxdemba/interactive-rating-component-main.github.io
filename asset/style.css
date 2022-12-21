@@ -60,6 +60,10 @@
     align-items: center;
     margin-bottom: 25px;
 }
+.attribution a:hover{
+    color: hsla(25, 97%, 53%, 0.8);
+    text-decoration: underline;
+}
 .img-container-active{
     animation: start .5s 1 ease-out;
 }
